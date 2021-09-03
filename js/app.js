@@ -3,11 +3,11 @@ const API_KEY = `43ebf354ad5c0a00d91e878e384b9766`;
 const searchTemperature = () => {
     const city = document.getElementById('city-name').value;
     const countryName = document.getElementById('country').value;
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${countryName}&appid=${API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryName}&appid=${API_KEY}&units=metric`;
 
     //clear input field
     document.getElementById('city-name').value = '';
-    
+
     //data fetching
     fetch(url)
         .then(res => res.json())
